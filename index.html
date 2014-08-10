@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+<title>=^.^=</title>
+</head>
+<body>
+
+<button onclick="sound.play( 'grass' );">instance.play( 'grass' );</button>
+<button onclick="sound.play( 'wood' );">instance.play( 'wood' );</button>
+<button onclick="sound.play( 'water' );">instance.play( 'water' );</button>
+<button onclick="sound.setDuration( 1000 );">instance.setDuration( 1000 );</button>
+<button onclick="sound.setDuration( 800 );">instance.setDuration( 800 );</button>
+<button onclick="sound.setDuration( 500 );">instance.setDuration( 500 );</button>
+
+<script src="footstep.js"></script>
+<script>
+
+var grass = new footstep.SrcSet(
+  'grass',
+  'step_grass_l.mp3',
+  'step_grass_r.mp3'
+);
+var wood = new footstep.SrcSet(
+  'wood',
+  'step_wood_l.mp3',
+  'step_wood_r.mp3'
+);
+var water = new footstep.SrcSet(
+  'water',
+  'step_water_l.mp3',
+  'step_water_r.mp3'
+);
+var srcSets = [ grass, wood, water ];
+var sound = new footstep.Sound( srcSets, 1000 );
+
+</script>
+
+</body>
+</html>
